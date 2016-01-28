@@ -1,0 +1,5 @@
+#!/bin/bash
+
+DEFAULT_START_OPTS='-use-control-port -nofork -nobrowser -verbose'
+
+cd /opt/aem && exec java $CQ_JVM_OPTS -jar AEM_6.1_Quickstart.jar $DEFAULT_START_OPTS "$@"
