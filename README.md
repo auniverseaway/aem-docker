@@ -1,3 +1,6 @@
+### What this does
+Build Author and Publish AEM containers and put them on the same network using [docker-compose](https://docs.docker.com/compose/). Updates and pull requests are *highly* encouraged.
+
 ### Requirements
 1. Docker ([Docker Toolbox](https://www.docker.com/products/docker-toolbox))
 2. A valid license.properties file.
@@ -8,7 +11,7 @@
 2. Download a copy of the AEM jar file, make sure it's named AEM_6.1_Quickstart.jar, and place it in this directory.
 3. Get a valid license.properties file and place it in this directory.
 
-### Running the Author and Publisher instances
+### Running Author and Publisher Instances
 ```bash
 docker-compose -p myproject --x-networking up -d
 ```
