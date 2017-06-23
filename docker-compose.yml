@@ -1,6 +1,5 @@
-# Be sure to run this with experimental networking enabled:
 #
-# $ docker-compose -p aem --x-networking up -d
+# $ docker-compose -p aem up -d
 #
 
 version: '3'
