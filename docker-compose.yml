@@ -1,22 +1,24 @@
-# Be sure to run this with experimental networking enabled:
 #
-# $ docker-compose -p aem --x-networking up -d
+# $ docker-compose -p aem up -d
 #
 
-author:
-  build: .
-  command: '-r author -p 4502'
-  ports:
-    - "4502:4502"
-  restart: unless-stopped
-  volumes:
-    - ./license.properties:/opt/aem/license.properties:ro
+version: '3'
 
-publish:
-  build: .
-  command: '-r publish -p 4503'
-  ports:
-    - "4503:4503"
-  restart: unless-stopped
-  volumes:
-    - ./license.properties:/opt/aem/license.properties:ro
+services:
+  author:
+    build: .
+    command: '-r author -p 4502'
+    ports:
+      - "4502:4502"
+    restart: unless-stopped
+    volumes:
+      - ./license.properties:/opt/aem/license.properties:ro
+
+  publish:
+    build: .
+    command: '-r publish -p 4503'
+    ports:
+      - "4503:4503"
+    restart: unless-stopped
+    volumes:
+      - ./license.properties:/opt/aem/license.properties:ro
